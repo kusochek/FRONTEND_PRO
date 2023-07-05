@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .header {
+            height: 150px;
+            width: 100%;
+            background-color: #c6c2fd;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 55px;
+        }
+
+        input, button {
+            width: 300px;
+            height: 60px;
+            border-radius: 10px;
+            border: none;
+            background-color: #fff;
+            padding: 10px 25px;
+            font-size: 18px;
+        }
+
+        button {
+            border: 1px solid rgb(49, 0, 133);
+        }
+
+        .main {
+            padding: 200px 50px 50px;
+        }
+
+        .card {
+            display: flex;
+            border: 1px solid rgb(49, 0, 133);
+            border-radius: 10px;
+            padding: 30px 20px;
+            margin-bottom: 25px;
+        }
+
+        .card > div:first-child {
+            margin-right: 30px;
+        }
+
+        .card > div:last-child {
+            width: 300px;
+            min-width: 300px;
+        }
+
+        .modal-wrapp {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0000003e;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .modal {
+            padding: 30px;
+            background-color: #fff;
+            width: 400px;
+            border-radius: 10px;
+        }
+
+        .modal input {
+            border: 1px solid rgb(49, 0, 133);
+            margin-bottom: 20px;
+        }
+
+        .modal button {
+            margin-bottom: 20px;
+        }
+
+        .d-none {
+            display: none !important;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <h1>MAGIC ITEMS</h1>
+        <div>
+            <button type="button" id="open-modal">New Magic item</button>
+            <input type="text" placeholder="Find Magic Items..." id="search">
+        </div>
+    </header>
+    <main id="main" class="main"></main>
+    <div class="modal-wrapp d-none" id="modal-wrapp">
+        <div class="modal">
+            <input type="text" id="title" placeholder="title">
+            <input type="text" id="description" placeholder="description">
+            <input type="text" id="quality" placeholder="quality">
+            <input type="text" id="type" placeholder="type">
+            <button id="modal-buton">Submit</button>
+            <button id="modal-cancel">Cancel</button>
+        </div>
+    </div>
+
+    <script src="magicItems.js"></script>
+</body>
+</html>
